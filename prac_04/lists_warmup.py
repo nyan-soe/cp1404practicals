@@ -4,6 +4,8 @@ def main():
     numbers[-1] = 1
     numbers_copy = numbers[2:]
     print(numbers_copy)
+    if 9 in numbers:
+        print("9 is in numbers")
 
 
 
