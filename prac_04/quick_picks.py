@@ -3,8 +3,9 @@ CP1404/CP5632 Practical
 Code for quick pick program
 """
 import random
-MIN=1
-MAX=45
+MIN = 1
+MAX = 45
+
 
 def main():
     """Generate quick pick numbers"""
