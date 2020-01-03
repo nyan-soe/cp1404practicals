@@ -1,0 +1,30 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: input_number
+            text: '7'
+            font_size: 48
+            multiline: False
+        BoxLayout:
+            orientation: 'vertical'
+            Button:
+                text: 'Up'
+                # the following line specifies the function in the app class to call when the button is pressed
+                on_press: app.handle_increment(1)
+
+            Button:
+                text: 'Down'
+                # the following line specifies the function in the app class to call when the button is pressed
+                on_press: app.handle_increment(-1)
+
+    Button:
+        text: 'Convert miles to kilometre'
+        # the following line specifies the function in the app class to call when the button is pressed
+        on_press: app.handle_calculate(input_number.text)
+
+    Label:
+        text: app.answer
+        font_size: 20
+        color: (1, 1, 0, 1)
