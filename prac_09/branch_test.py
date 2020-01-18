@@ -1,3 +1,3 @@
-test = ["hello", "my", "branch"]
+test = ["hello", "my", "testing"]
 test2 = ", ".join(test)
 print(test2)
