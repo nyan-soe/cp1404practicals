@@ -1,3 +1,3 @@
-print("This is branch")
-print("This is a test")
-print("Delete the branch successfully")
+test = ["hello", "my", "branch"]
+test2 = ", ".join(test)
+print(test2)
