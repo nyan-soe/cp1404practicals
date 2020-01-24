@@ -34,7 +34,20 @@ def main():
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
     new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
-    return new_name
+    new_filename = ""
+    check_symbol = ["(", "_"]  # A list of symbols where uppercase must follow
+
+    for count, character in enumerate(new_name):
+        current_character = character
+        substitute_character = current_character
+        if count > 0:
+            if previous_character in check_symbol:
+                substitute_character = current_character.upper()
+            elif current_character.isupper() and previous_character.islower():  # for example: sW
+                substitute_character = "_" + current_character
+        previous_character = current_character
+        new_filename = new_filename + substitute_character
+    return new_filename
 
 
 def demo_walk():
